@@ -1,0 +1,6 @@
+#!/usr/bin/python3
+print ("hello world python")
+the_world_is_flat = True
+if the_world_is_flat:
+print("Be careful not to fall off!")
+
