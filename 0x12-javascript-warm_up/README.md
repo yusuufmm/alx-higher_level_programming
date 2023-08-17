@@ -1,0 +1,1 @@
+Javascript it amazing
