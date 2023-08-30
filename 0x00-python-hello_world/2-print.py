@@ -1,2 +1,2 @@
 #!/usr/bin/puthon3
-print("\"Programming is building multilingual puzzel")
+print("\"Programming is like  building multilingual puzzel")
