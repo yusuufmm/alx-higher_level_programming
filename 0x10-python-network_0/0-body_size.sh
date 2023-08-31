@@ -6,11 +6,6 @@ if [ $# -ne 1 ]; then
     exit 1
 fi
 
-url="$1"
-
-# Use curl to send a request and get the size of the response body
-response_size=$(curl -s "$url" | wc -c)
-
-# Display the response size in bytes
-echo "Response size: ${response_size} bytes"
+# Use curl to send a request and display the size of the response body in bytes
+curl -s "$1" | wc -c
 
