@@ -1,8 +1,9 @@
 #!/usr/bin/python3
+"""Fetches https://alx-intranet.hbtn.io/status."""
 import urllib.request
 
 if __name__ == "__main__":
-# Define the URL to fetch
+    # Define the URL to fetch
     url = "https://alx-intranet.hbtn.io/status"
     request = urllib.request.Request(url)
 try:
