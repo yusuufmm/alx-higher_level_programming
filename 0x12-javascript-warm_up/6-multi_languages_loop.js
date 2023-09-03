@@ -1,7 +1,7 @@
 #!/usr/bin/node
 /* printing script using a loop */
-let i;
+let p;
 const myString = ['C is fun', 'Python is cool', 'JavaScript is amazing'];
-for (i = 0; i < 3; i++){
-	console.log(myString[i]);
+for (p = 0; p < 3; p++){
+	console.log(myString[p]);
 }
