@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """A class that defines a rectangle"""
+
+
 class Rectangle:
     """this represents a rectangle"""
 
@@ -14,6 +16,7 @@ class Rectangle:
         """
         self.width = width
         self.height = height
+
     @property
     def width(self):
         """retrieves width attribute"""
