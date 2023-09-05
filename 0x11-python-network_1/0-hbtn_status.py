@@ -1,20 +1,18 @@
 #!/usr/bin/python3
-"""Fetches https://alx-intranet.hbtn.io/status."""
-import urllib.request
+""" Script that fetches https://alx-intranet.hbtn.io/status """
 
+import urllib.request
 if __name__ == "__main__":
-    # Define the URL to fetch
-    url = "https://alx-intranet.hbtn.io/status"
-    request = urllib.request.Request(url)
-try:
+    request = urllib.request.Request("https://alx-intranet.hbtn.io/status")
+    with urllib.request.urlopen(request) as response:
+
     # Send a GET request to the URL and open a connection
     with urllib.request.urlopen(request) as response:
         # Read the response content into the 'content' variable
-        content = response.read()
+        with urllib.request.urlopen(request) as response:
+
+        body = response.read()
         print("Body response:")
-        print("    - type:", type(content))
-        print("    - content:", content)
-        print("    - utf8 content:", content.decode("utf-8"))
-except Exception as e:
-    # Handle any exceptions that may occur during the request
-    print("Error:", e)
+        print("\t- type: {}".format(type(body)))
+        print("\t- content: {}".format(body))
+        print("\t- utf8 content: {}".format(body.decode("utf-8")))
