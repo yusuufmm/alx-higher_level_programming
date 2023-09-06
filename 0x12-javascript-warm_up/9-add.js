@@ -1,8 +1,0 @@
-#!/usr/bin/node
-/* script that prints the addition of 2 */
-
-function add (a, b) {
-  return a + b;
-}
-
-console.log(add(Number(process.argv[2]), Number(process.argv[3])));
