@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """
 Takes in a URL, sends a request to the URL and displays the body of the response.
-If the HTTP status code is an error, prints the error code.
 """
 
 import requests
