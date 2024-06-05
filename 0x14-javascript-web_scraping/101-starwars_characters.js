@@ -1,5 +1,5 @@
 #!/usr/bin/node
-
+// Completed tasks
 
 const request = require('request');
 const id = process.argv[2];
@@ -23,4 +23,4 @@ request.get(url, (error, response, body) => {
       });
     }
   }
-});;
+});
