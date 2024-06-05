@@ -7,20 +7,30 @@ const url = `https://swapi-api.alx-tools.com/api/films/${id}`;
 
 request.get(url, (error, response, body) => {
   if (error) {
-    console.log(error);
-  } else {
+    console.error('Error fetching film:', error);
+    return;
+  }
+
+  try {
     const content = JSON.parse(body);
     const characters = content.characters;
-    // console.log(characters);
-    for (const character of characters) {
-      request.get(character, (error, response, body) => {
+
+    characters.forEach(characterUrl => {
+      request.get(characterUrl, (error, response, body) => {
         if (error) {
-          console.log(error);
-        } else {
-          const names = JSON.parse(body);
-          console.log(names.name);
+          console.error('Error fetching character:', error);
+          return;
+        }
+
+        try {
+          const character = JSON.parse(body);
+          console.log(character.name);
+        } catch (parseError) {
+          console.error('Error parsing character JSON:', parseError);
         }
       });
-    }
+    });
+  } catch (parseError) {
+    console.error('Error parsing film JSON:', parseError);
   }
 });
